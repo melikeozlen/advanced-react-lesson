@@ -68,3 +68,53 @@
 // }
 
 // export default App
+
+// * -- Loader Components - ResourceLoader -- 
+
+// import React from 'react'
+// import CurrentUserData from './components/LoaderComponent/current-user-loader'
+// import { UserInfo } from './components/LoaderComponent/user-info'
+// import UserData from './components/LoaderComponent/user-loader'
+// import ResourceLoader from './components/LoaderComponent/resource-loader'
+// import BookInfo from './components/LoaderComponent/book-info'
+
+// const App = () => {
+//   return (
+//     <>
+//       {/* more flexible bc, we use this components for book or other fetch data */}
+//       <ResourceLoader resourceUrl={`http://localhost:9090/users/3`} resourceName={"user"}>
+//         <UserInfo />
+//       </ResourceLoader>
+//       {/* For example */}
+//       <ResourceLoader resourceUrl={`http://localhost:9090/books/4`} resourceName={"book"}>
+//         <BookInfo />
+//       </ResourceLoader>
+//     </>
+//   )
+// }
+
+// export default App
+
+// * -- DataSource Components - ResourceLoader -- 
+
+// import React from 'react'
+// import { UserInfo } from './components/LoaderComponent/user-info'
+// import DataSource from './components/LoaderComponent/data-source'
+// import axios from 'axios'
+
+// const getDAtaFromServer = async (url) =>{
+//   const response = await axios.get(url);
+//   return response.data
+// }
+
+// const App = () => {
+//   return (
+//     <>
+//       <DataSource getData={ () => getDAtaFromServer(`http://localhost:9090/users/3`)} resourceName={"user"}>
+//         <UserInfo />
+//       </DataSource>
+//     </>
+//   )
+// }
+
+// export default App
