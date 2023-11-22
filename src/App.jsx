@@ -6,14 +6,15 @@ import SmallListAuthorType from './components/Lists/authors/SmallListType'
 import { SmallListBookType } from './components/Lists/books/SmallListType'
 import { LargeListBookType } from './components/Lists/books/LargeListType'
 import { books } from './data/books'
+import { NumberedList } from './components/Lists/lists/Numbered'
 
 const App = () => {
   return (
     <div>
 
       <h3> Author List </h3>
-      <RegularList items={authors} sourceName={"author"} ItemComponent={SmallListAuthorType} />
-      <RegularList items={authors} sourceName={"author"} ItemComponent={LargeListAuthorType} />
+      <NumberedList items={authors} sourceName={"author"} ItemComponent={SmallListAuthorType} />
+      <NumberedList items={authors} sourceName={"author"} ItemComponent={LargeListAuthorType} />
 
       <h3> Book List</h3>
 
