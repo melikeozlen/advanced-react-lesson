@@ -6,7 +6,10 @@ import { LeftComponent } from './components/left-component'
 const App = () => {
   return (
     <>
-      <SplitPage Left={LeftComponent} Right={RightComponent} />
+      <SplitPage leftWidth={2} rightWidth={1} >
+        <LeftComponent title={"hello i'm left v.2"} />
+        <RightComponent title={"hello i'm rigt v.2"} />
+      </SplitPage>
     </>
   )
 }

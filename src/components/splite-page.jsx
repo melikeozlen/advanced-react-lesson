@@ -5,18 +5,20 @@ display:flex;
 `
 
 const Side = styled.div`
-flex:1;
+flex:${(p) => p.width};
+background-color: ${(p) => p.color};
 `
 
-const SplitPage = ({ Left, Right }) => {
+const SplitPage = ({ children, leftWidth = 1, rightWidth = 1 }) => {
+  const [LeftComponent, RightComponent] = children;
   return (
     <SplitPageContainer>
-      <Side>
-        <Left />
+      <Side width={leftWidth} color="red">
+        {LeftComponent}
       </Side>
 
-      <Side>
-        <Right />
+      <Side width={rightWidth} color="blue">
+        {RightComponent}
       </Side>
     </SplitPageContainer>
   )

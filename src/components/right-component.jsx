@@ -1,7 +1,7 @@
-export const RightComponent = ({ }) => {
+export const RightComponent = ({ title }) => {
     return (
         <>
-            hello, i'm right
+            {title}
         </>
     )
 }

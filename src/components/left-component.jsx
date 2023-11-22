@@ -1,10 +1,10 @@
 
 
 
-export const LeftComponent = ({ }) => {
+export const LeftComponent = ({ title }) => {
     return (
         <>
-        hello, i'm left
+            {title}
         </>
     )
 }
