@@ -1,12 +1,13 @@
 import React from 'react'
-import { logProps } from './components/HOC/log-props'
 import { UserInfo } from './components/LoaderComponent/user-info'
+import { includesUser } from './components/HOC/includes-user'
 
-const UserInfoWarapper = logProps(UserInfo)
+const UserInfoWarapperWidthLoading = includesUser(UserInfo, "3");
+
 const App = () => {
   return (
     <>
-      <UserInfoWarapper test={"test"} b="I'm be" c={21}/>
+      <UserInfoWarapperWidthLoading/>
     </>
   )
 }
