@@ -1,14 +1,21 @@
 import React from 'react'
-import { UserInfo } from './components/LoaderComponent/user-info'
-import { includesUser } from './components/HOC/includes-user'
+import { RecursiveComponent } from './components/RecursiveFunction/recursive'
 
-const UserInfoWarapperWidthLoading = includesUser(UserInfo, "3");
 
+const myObject = {
+  key1: "value 1",
+  key2: {
+    innerKey1: "hello i'm inner 1!",
+    innerKey2: "hello i'm inner 2!"
+  },
+  key3:"value 3"
+}
 const App = () => {
+
   return (
-    <>
-      <UserInfoWarapperWidthLoading/>
-    </>
+    <div data-testid="cypress-list">
+      <RecursiveComponent data={myObject} />
+    </div>
   )
 }
 
